@@ -1,0 +1,986 @@
+panic error time:2024-10-19 10:52:00
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 61 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00043aed0?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc000138ca0?, 0xb899c0?}, {0xb949e0?, 0xc0001ce150?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4908?, 0x116b0a0?}, {0xb899c0?, 0xc000138c00?, 0xd0?}, {0xb949e0, 0xc0001ce150})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc00048c700)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc0002de9c0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc00013f1d0, 0xc000207620?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000138c00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000138000)
+	/home/oj/controllers/problem.go:23 +0x165
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000138000)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00013c9c0, 0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00013c9c0, {0xcc38a8, 0xc0001740e0}, 0xc000218640)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc1198?}, {0xcc38a8?, 0xc0001740e0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc000170360, {0xcc4cc8, 0xc0002de1e0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:52:12
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 47 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00043b270?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc000138ea0?, 0xb899c0?}, {0xb949e0?, 0xc0001ce258?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4908?, 0x116b0a0?}, {0xb899c0?, 0xc000138e00?, 0xc00023e780?}, {0xb949e0, 0xc0001ce258})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc00048cc40)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc0002df1d0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc00013f1d0, 0xc000207620?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000138e00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000138000)
+	/home/oj/controllers/problem.go:23 +0x165
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000138000)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc00013c9c0, 0xc000138000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc00013c9c0, {0xcc38a8, 0xc000174380}, 0xc0002197c0)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc1198?}, {0xcc38a8?, 0xc000174380?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00031c6c0, {0xcc4cc8, 0xc0002de1e0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:54:08
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 8 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00045f8c0?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc0000b59a0?, 0xb899c0?}, {0xb949e0?, 0xc000012258?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc0000b5900?, 0x503479?}, {0xb949e0, 0xc000012258})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004fe1c0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000446630)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc0000b5900})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0002b00e0}, 0xc0001a8140)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0002b00e0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc000432870, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:54:50
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 30 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00045fd80?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc0002364a0?, 0xb899c0?}, {0xb949e0?, 0xc000012a38?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc000236400?, 0xc0001cf080?}, {0xb949e0, 0xc000012a38})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0001a0540)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000458690)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000236400})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000236100)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000236100)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0001041c0}, 0xc00048e280)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0001041c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018e2d0, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:55:23
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 35 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00018c290?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc0002367a0?, 0xb899c0?}, {0xb949e0?, 0xc000012a98?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc000236700?, 0xc000288780?}, {0xb949e0, 0xc000012a98})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0001a0c40)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000458c90)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000236700})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000236100)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000236100)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0001042a0}, 0xc00048e640)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0001042a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018e5a0, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:55:29
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 43 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc000284600?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc0000b5ea0?, 0xb899c0?}, {0xb949e0?, 0xc00011e240?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc0000b5e00?, 0xc0001cf700?}, {0xb949e0, 0xc00011e240})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004fe700)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000446f60)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc0000b5e00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0002b02a0}, 0xc0001a8c80)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0002b02a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018e870, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:55:39
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 57 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00018c820?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc000236aa0?, 0xb899c0?}, {0xb949e0?, 0xc000012b40?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc000236a00?, 0xc000288b80?}, {0xb949e0, 0xc000012b40})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0001a1500)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000459410)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000236a00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc000104380}, 0xc00048ec80)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc000104380?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc000433050, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:55:50
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 68 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc000284a30?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc00038c2a0?, 0xb899c0?}, {0xb949e0?, 0xc00011e300?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc00038c200?, 0xc0001cfb00?}, {0xb949e0, 0xc00011e300})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004fea80)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000447710)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc00038c200})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0002b0380}, 0xc0001a9040)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0002b0380?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018eb40, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:55:58
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 82 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00018d120?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc00038c5a0?, 0xb899c0?}, {0xb949e0?, 0xc000012c60?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc00038c500?, 0xc000288d80?}, {0xb949e0, 0xc000012c60})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004ff180)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000447d70)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc00038c500})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000236100)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000236100)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0002b0460}, 0xc0001a97c0)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0002b0460?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc0004333b0, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:56:02
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 73 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00018d4e0?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc000236da0?, 0xb899c0?}, {0xb949e0?, 0xc000012c90?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc000236d00?, 0xc00023e9f0?}, {0xb949e0, 0xc000012c90})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0001a1dc0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000459c50)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000236d00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc000104460}, 0xc00048f040)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc000104460?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018ebd0, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:56:03
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 89 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc00018dd40?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc00038cda0?, 0xb899c0?}, {0xb949e0?, 0xc000012d50?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc00038cd00?, 0xc00010a300?}, {0xb949e0, 0xc000012d50})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004ff880)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc0003b4660)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc00038cd00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000236100)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000236100)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0002b0540}, 0xc0001a9b80)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0002b0540?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc000433680, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:56:12
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 81 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc0002321e0?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc0002363a0?, 0xb899c0?}, {0xb949e0?, 0xc000012258?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc000236300?, 0xc0002429f0?}, {0xb949e0, 0xc000012258})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004008c0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc000402330)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000236300})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0001040e0}, 0xc00048e000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0001040e0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018e000, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:57:44
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 107 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc000284450?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc00038c2a0?, 0xb899c0?}, {0xb949e0?, 0xc00011e168?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc00038c200?, 0xc00010ac80?}, {0xb949e0, 0xc00011e168})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004fe1c0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc0003b4e10)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc00038c200})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000236100)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000236100)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc000236100)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0002b01c0}, 0xc00048e640)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0002b01c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018e480, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:58:18
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 109 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc000284110?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc00038c4a0?, 0xb899c0?}, {0xb949e0?, 0xc00011e060?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4928?, 0x116b0a0?}, {0xb899c0?, 0xc00038c400?, 0xc00023e9f0?}, {0xb949e0, 0xc00011e060})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0004fe700)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc0003b51a0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0002a6af0, 0xc000197530?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc00038c400})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc0000b5400)
+	/home/oj/controllers/problem.go:24 +0x1c5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc0000b5400)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0002c6000, 0xc0000b5400)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0002c6000, {0xcc38c8, 0xc0001042a0}, 0xc00048e780)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc11b8?}, {0xcc38c8?, 0xc0001042a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc00018e510, {0xcc4ce8, 0xc00021dda0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 10:59:52
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 23 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc000024090?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc000528aa0?, 0xb899c0?}, {0xb949e0?, 0xc000012228?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc48c8?, 0x116b0a0?}, {0xb899c0?, 0xc000528a00?, 0x503479?}, {0xb949e0, 0xc000012228})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0000e68c0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc0002e73b0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc000092f50, 0xc00022ff50?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000528a00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem({{0xc00045a210, 0x6}, {0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}, {0x0, 0x0}, ...})
+	/home/oj/models/problem.go:35 +0x87
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000528500)
+	/home/oj/controllers/problem.go:23 +0x158
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000528500)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000528500)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000528500)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000528500)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0000c8000, 0xc000528500)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0000c8000, {0xcc3868, 0xc00019a0e0}, 0xc000232000)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc1158?}, {0xcc3868?, 0xc00019a0e0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc000156120, {0xcc4c88, 0xc0000d92c0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 11:00:28
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 29 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc0002282b0?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc0001405a0?, 0xb899c0?}, {0xb949e0?, 0xc0001f6090?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc48c8?, 0x116b0a0?}, {0xb899c0?, 0xc000140500?, 0x503479?}, {0xb949e0, 0xc0001f6090})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0000e6540)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc00055e270)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc000092f50, 0xc00022ff50?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000140500})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem({{0xc0001184e0, 0x6}, {0xc0003a4800, 0x3}, {0xc0003a4804, 0x4}, {0xc0003a4808, 0x5}, {0xc0003a4810, 0x4}, ...})
+	/home/oj/models/problem.go:35 +0x87
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000528e00)
+	/home/oj/controllers/problem.go:23 +0x158
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000528e00)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000528e00)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000528e00)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000528e00)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0000c8000, 0xc000528e00)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0000c8000, {0xcc3868, 0xc0000b41c0}, 0xc0004a8140)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc1158?}, {0xcc3868?, 0xc0000b41c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc000156000, {0xcc4c88, 0xc0000d92c0})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
+panic error time:2024-10-19 11:04:09
+reflect: reflect.Value.Set using unaddressable value
+stacktrace from panic:goroutine 27 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+pkg/middleware/log.Recover.func1()
+	/home/oj/middleware/log/log.go:124 +0x285
+panic({0xab8540?, 0xc000025080?})
+	/usr/local/go/src/runtime/panic.go:785 +0x132
+reflect.flag.mustBeAssignableSlow(0x18?)
+	/usr/local/go/src/reflect/value.go:257 +0x74
+reflect.flag.mustBeAssignable(...)
+	/usr/local/go/src/reflect/value.go:244
+reflect.Value.Set({0xb949e0?, 0xc000140aa0?, 0xb899c0?}, {0xb949e0?, 0xc000012288?, 0xab8540?})
+	/usr/local/go/src/reflect/value.go:2307 +0x65
+gorm.io/gorm/schema.(*Field).setupValuerAndSetter.func12({0xcc4868?, 0x116b0a0?}, {0xb899c0?, 0xc000140a00?, 0xd0?}, {0xb949e0, 0xc000012288})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/schema/field.go:840 +0x405
+gorm.io/gorm/callbacks.ConvertToCreateValues(0xc0005221c0)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:326 +0x17cb
+gorm.io/gorm/callbacks.RegisterDefaultCallbacks.Create.func3(0xc00041e780)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks/create.go:66 +0x137
+gorm.io/gorm.(*processor).Execute(0xc0004baf50, 0xc000125aa0?)
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/callbacks.go:130 +0x3cb
+gorm.io/gorm.(*DB).Create(0xb899c0?, {0xb899c0, 0xc000140a00})
+	/root/go/pkg/mod/gorm.io/gorm@v1.25.12/finisher_api.go:24 +0xa8
+pkg/models.Problem.CreateProblem(...)
+	/home/oj/models/problem.go:33
+pkg/controllers.ProblemController.CreateProblem({}, 0xc000140600)
+	/home/oj/controllers/problem.go:22 +0xc9
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+pkg/middleware/log.Recover(0xc000140600)
+	/home/oj/middleware/log/log.go:133 +0x5c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000140600)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0xc000140600)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x6f
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0xc000140600)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xe5
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0000e2000, 0xc000140600)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x892
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0000e2000, {0xcc3808, 0xc00019a0e0}, 0xc000240500)
+	/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x1b2
+net/http.serverHandler.ServeHTTP({0xcc10f8?}, {0xcc3808?, 0xc00019a0e0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0x8e
+net/http.(*conn).serve(0xc0000c7050, {0xcc4c28, 0xc0000f6d50})
+	/usr/local/go/src/net/http/server.go:2092 +0x5d0
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x485
+
